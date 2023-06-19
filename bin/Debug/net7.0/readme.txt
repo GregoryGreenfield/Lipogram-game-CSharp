@@ -16,10 +16,11 @@ Results:
 - Wether you were correct.
 
 Ideas to implement (- to do, + done):
-- Show the words with their Lipograms restored.
+-! Show the words with their Lipograms restored.
+-! Don't have repeat words.
 - Implement multiple Lipograms per word.
 - Dictionaries are very slow.
 - Use SQL.
-- Would you like to play again?
 - Upload to web. Create GUI and scoreboards.
++ Would you like to play again?
 + Start with choose language, then call respective function.

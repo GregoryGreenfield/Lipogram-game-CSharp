@@ -23,10 +23,14 @@ namespace Mainland
         }
 
         /// <summary>
-        /// 1: Give game instructions.
+        /// 1: Get lipogram
+        /// 2: Start stopwatch
+        /// 3: Generate lipogrammed words, test user for answer
+        /// 4: Loop 3 until correct answer is given
+        /// 5: Print results, offer to play again.
         /// </summary>
-        /// <param name="language"></param>
-        /// <param name="path"></param>
+        /// <param name="language">The language of the words the user wants to play in.</param>
+        /// <param name="path">The path to the source of words the user wants to work in.</param>
         public static void DynamicMain(string language, string path)
         {
             // Declarations
@@ -43,22 +47,24 @@ namespace Mainland
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
 
-            // Print lipogrammed words
+            // Print lipogrammed words and query user.
             while (!GuessCorrect)
             {
                 Lipogrammed = DynamicCoded.LipogrammedDynamicString(path, Lipo);
                 Console.WriteLine("- " + Lipogrammed);
                 GlobalVariables.CharCounter = GlobalVariables.CharCounter + Lipogrammed.Length;
                 GlobalVariables.WordCounter++;
-                GuessCorrect = DynamicCoded.LipoGuess(Lipo, Console.ReadLine());
+                string? guess = Console.ReadLine();
+                GuessCorrect = DynamicCoded.LipoGuess(Lipo, guess!);
             }
 
             // Stop watch
             stopWatch.Stop();
             TimeSpan ts = stopWatch.Elapsed;
             string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10);
-            Console.WriteLine("Lipogram is: " + Lipo + "\nTime taken: " + elapsedTime + "\nTotal number of guesses: " + GlobalVariables.GuessCounter + "\nTotal number of words: " + GlobalVariables.WordCounter + "\nTotal number of characterss: " + GlobalVariables.CharCounter + "\nThank you for playing!\nWould you like to play again?\n'Y' or 'N', or 'S' for change of language and/or words");
-            switch (Console.ReadLine().ToLower())
+            Console.WriteLine("Lipogram is: " + Lipo + "\nTime taken: " + elapsedTime + "\nTotal number of guesses: " + GlobalVariables.GuessCounter + "\nTotal number of words: " + GlobalVariables.WordCounter + "\nTotal number of characterss: " + GlobalVariables.CharCounter + "\nThank you for playing!\nWould you like to play again?\nYes: 'Y'\nNo:  'N'\nChange of language and/or words: 'S'");
+            string? choice = Console.ReadLine()!.ToLower();
+            switch (choice)
             {
                 case "y":
                     DynamicMain(language, path);

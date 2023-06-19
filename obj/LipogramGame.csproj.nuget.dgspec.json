@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/gg/Projects/CryptoJourney/LipogramGame/LipogramGame.csproj": {}
+    "/Users/gg/Projects/CryptoJourney/LipogramGameC#/LipogramGame.csproj": {}
   },
   "projects": {
-    "/Users/gg/Projects/CryptoJourney/LipogramGame/LipogramGame.csproj": {
+    "/Users/gg/Projects/CryptoJourney/LipogramGameC#/LipogramGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/gg/Projects/CryptoJourney/LipogramGame/LipogramGame.csproj",
+        "projectUniqueName": "/Users/gg/Projects/CryptoJourney/LipogramGameC#/LipogramGame.csproj",
         "projectName": "LipogramGame",
-        "projectPath": "/Users/gg/Projects/CryptoJourney/LipogramGame/LipogramGame.csproj",
+        "projectPath": "/Users/gg/Projects/CryptoJourney/LipogramGameC#/LipogramGame.csproj",
         "packagesPath": "/Users/gg/.nuget/packages/",
-        "outputPath": "/Users/gg/Projects/CryptoJourney/LipogramGame/obj/",
+        "outputPath": "/Users/gg/Projects/CryptoJourney/LipogramGameC#/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/gg/.nuget/NuGet/NuGet.Config"

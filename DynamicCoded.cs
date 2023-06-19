@@ -43,13 +43,13 @@ namespace DynamicCodedLipograms
         public static string[] GetLanguageAndPath()
         {
             Console.WriteLine("Choose your language:\n1: English\n2: Deutsch\n3: Telugu");
-            string language = Console.ReadLine();
+            string? language = Console.ReadLine();
             string source = "";
             switch (language)
             {
                 case "1":
                     Console.WriteLine("Choose your resource:\n1: Ulysses Chapter 1, James Joyce\n2: New York Times article on birds\n3: English dictionary (exhaustive)");
-                    string choice = Console.ReadLine();
+                    string? choice = Console.ReadLine();
                     switch (choice)
                     {
                         case "1":
@@ -105,7 +105,7 @@ namespace DynamicCodedLipograms
                     break;
             }
             string path = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "/WordsRepo/" + source;
-            string[] LanguageAndPath = new string[] { language, path };
+            string[] LanguageAndPath = new string[] { language!, path };
             return (LanguageAndPath);
         }
 

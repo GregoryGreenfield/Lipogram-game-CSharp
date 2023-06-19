@@ -5,7 +5,6 @@ namespace HardCodedLipograms
     /// </summary>
     class HardCoded
     {
-
         public static string[] LipogramsHardCoded()
         {
             string[] Lipos = new string[] { "i", "en", "t" };
@@ -29,6 +28,7 @@ namespace HardCodedLipograms
             }
             return (Lower);
         }
+
         public static void HardMain()
         {
             Console.WriteLine(HardCoded.OriginalStringGeneratorHardCoded());
